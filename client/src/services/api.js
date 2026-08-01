@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: 'https://fitness-tracker-rc0q.onrender.com/',
 });
 
 // Request interceptor to attach JWT token
