@@ -90,8 +90,8 @@ function SavedGoals() {
           </div>
 
           <div className="card text-center p-8 mt-6 empty-state-card hover-lift">
-            <div className="empty-icon" style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>
-              🎯
+            <div className="empty-icon text-primary mb-3">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
             </div>
             <h2 className="empty-title">No goals saved yet.</h2>
             <p className="text-muted mt-2 mb-6" style={{ maxWidth: '480px', margin: '0.75rem auto 1.5rem' }}>
@@ -150,8 +150,9 @@ function SavedGoals() {
               Monitor your active health targets and completion progress
             </p>
           </div>
-          <Link to="/goals" className="btn btn-primary">
-            ✏️ Edit Goals
+          <Link to="/goals" className="btn btn-primary flex-center gap-2">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            Edit Goals
           </Link>
         </div>
 
@@ -159,7 +160,9 @@ function SavedGoals() {
           {/* Target Weight Card */}
           <div className="card saved-goal-card hover-lift">
             <div className="goal-card-header">
-              <div className="stat-icon icon-purple">🎯</div>
+              <div className="stat-icon icon-purple">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
               <div className="goal-header-text">
                 <span className="stat-label">Target Weight</span>
                 <h3 className="goal-value mt-1">{weightDisplay}</h3>
@@ -185,7 +188,9 @@ function SavedGoals() {
           {/* Daily Calories Goal Card */}
           <div className="card saved-goal-card hover-lift">
             <div className="goal-card-header">
-              <div className="stat-icon icon-pink">🔥</div>
+              <div className="stat-icon icon-pink">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-1.7-2.5-3.5-2.5-3.5s-2.5 1.8-2.5 3.5Z"/><path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10c0 4.5-3.5 8-8 8a8 8 0 0 1-5.5-2.2C4.5 17.5 7 22 12 22c5.5 0 10-4.5 10-10 0-4-2.5-7.5-6-9-1.5 2.5-2.5 3.5-4 1Z"/></svg>
+              </div>
               <div className="goal-header-text">
                 <span className="stat-label">Daily Calories Goal</span>
                 <h3 className="goal-value mt-1">{caloriesDisplay}</h3>
@@ -211,7 +216,9 @@ function SavedGoals() {
           {/* Weekly Workout Goal Card */}
           <div className="card saved-goal-card hover-lift">
             <div className="goal-card-header">
-              <div className="stat-icon icon-green">📅</div>
+              <div className="stat-icon icon-green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
               <div className="goal-header-text">
                 <span className="stat-label">Weekly Workout Goal</span>
                 <h3 className="goal-value mt-1">{workoutsDisplay}</h3>

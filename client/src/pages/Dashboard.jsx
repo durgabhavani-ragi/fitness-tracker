@@ -162,7 +162,9 @@ function Dashboard() {
         <div className="dashboard-summary-grid mt-4">
           {/* Card 1: BMI */}
           <div className="card summary-card hover-lift">
-            <div className="stat-icon icon-purple">⚖️</div>
+            <div className="stat-icon icon-purple">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.28 1.28L3 12l5.8 1.9a2 2 0 0 1 1.28 1.28L12 21l1.9-5.8a2 2 0 0 1 1.28-1.28L21 12l-5.8-1.9a2 2 0 0 1-1.28-1.28Z"/></svg>
+            </div>
             <div className="stat-details">
               <span className="stat-label">BMI Score</span>
               <div className="stat-value-group">
@@ -182,7 +184,9 @@ function Dashboard() {
 
           {/* Card 2: Total Workouts */}
           <div className="card summary-card hover-lift">
-            <div className="stat-icon icon-indigo">🏋️‍♂️</div>
+            <div className="stat-icon icon-indigo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M2 12h20M4 9v6M20 9v6M8 6.5v11M16 6.5v11"/></svg>
+            </div>
             <div className="stat-details">
               <span className="stat-label">Total Workouts</span>
               <h2 className="stat-value">{summary?.totalWorkouts || 0}</h2>
@@ -192,7 +196,9 @@ function Dashboard() {
 
           {/* Card 3: Calories Burned */}
           <div className="card summary-card hover-lift">
-            <div className="stat-icon icon-pink">🔥</div>
+            <div className="stat-icon icon-pink">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 17c1.38 0 2.5-1.12 2.5-2.5 0-1.7-2.5-3.5-2.5-3.5s-2.5 1.8-2.5 3.5Z"/><path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10c0 4.5-3.5 8-8 8a8 8 0 0 1-5.5-2.2C4.5 17.5 7 22 12 22c5.5 0 10-4.5 10-10 0-4-2.5-7.5-6-9-1.5 2.5-2.5 3.5-4 1Z"/></svg>
+            </div>
             <div className="stat-details">
               <span className="stat-label">Calories Burned</span>
               <h2 className="stat-value">
@@ -205,7 +211,9 @@ function Dashboard() {
 
           {/* Card 4: Workout Duration */}
           <div className="card summary-card hover-lift">
-            <div className="stat-icon icon-green">⏱️</div>
+            <div className="stat-icon icon-green">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <div className="stat-details">
               <span className="stat-label">Workout Duration</span>
               <h2 className="stat-value">
@@ -220,7 +228,9 @@ function Dashboard() {
 
           {/* Card 5: Goal Progress */}
           <div className="card summary-card hover-lift card-highlight">
-            <div className="stat-icon icon-amber">🎯</div>
+            <div className="stat-icon icon-amber">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
             <div className="stat-details w-100">
               <div className="flex-between">
                 <span className="stat-label">Goal Progress</span>
@@ -238,6 +248,7 @@ function Dashboard() {
               </div>
             </div>
           </div>
+
         </div>
 
         {/* Charts & Analytics Section */}
@@ -311,8 +322,8 @@ function Dashboard() {
               {recentWorkouts.map((workout) => (
                 <div key={workout._id} className="recent-workout-item flex-between p-3 border-top">
                   <div className="flex-center gap-3">
-                    <div className="stat-icon icon-purple" style={{ width: '42px', height: '42px', fontSize: '1.2rem' }}>
-                      🏃‍♂️
+                    <div className="stat-icon icon-purple" style={{ width: '42px', height: '42px' }}>
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6.5 6.5h11M6.5 17.5h11M2 12h20M4 9v6M20 9v6M8 6.5v11M16 6.5v11"/></svg>
                     </div>
                     <div>
                       <strong className="d-block">{workout.workoutName}</strong>

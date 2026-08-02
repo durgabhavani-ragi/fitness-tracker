@@ -26,8 +26,11 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/dashboard" className="nav-brand" onClick={handleNavLinkClick}>
-          <span className="brand-icon">⚡</span> FitPulse
+        <Link to="/dashboard" className="nav-brand flex-center gap-2" onClick={handleNavLinkClick}>
+          <span className="brand-icon text-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </span>
+          FitPulse
         </Link>
 
         <button
@@ -100,6 +103,7 @@ function Navbar() {
           >
             {theme === 'dark' ? '☀️' : '🌙'}
           </button>
+
           {user?.name && <span className="user-name">Hi, {user.name}</span>}
           <button onClick={handleLogout} className="btn btn-outline">
             Logout
