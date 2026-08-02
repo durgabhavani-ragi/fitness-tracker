@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import Workouts from './pages/Workouts';
 import Goals from './pages/Goals';
+import SavedGoals from './pages/SavedGoals';
 import Progress from './pages/Progress';
 import NotFound from './pages/NotFound';
 
@@ -46,6 +47,14 @@ function App() {
               }
             />
             <Route
+              path="/saved-goals"
+              element={
+                <ProtectedRoute>
+                  <SavedGoals />
+                </ProtectedRoute>
+              }
+            />
+            <Route
               path="/goals"
               element={
                 <ProtectedRoute>
@@ -53,6 +62,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
+
             <Route
               path="/profile"
               element={

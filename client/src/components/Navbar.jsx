@@ -61,12 +61,20 @@ function Navbar() {
             Progress
           </Link>
           <Link
+            to="/saved-goals"
+            className={`nav-item ${isActive('/saved-goals') ? 'active' : ''}`}
+            onClick={handleNavLinkClick}
+          >
+            Saved Goals
+          </Link>
+          <Link
             to="/goals"
             className={`nav-item ${isActive('/goals') ? 'active' : ''}`}
             onClick={handleNavLinkClick}
           >
             Goals
           </Link>
+
           <Link
             to="/profile"
             className={`nav-item ${isActive('/profile') ? 'active' : ''}`}

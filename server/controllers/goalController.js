@@ -38,4 +38,22 @@ const setGoal = async (req, res) => {
   }
 };
 
-module.exports = { setGoal };
+const getGoal = async (req, res) => {
+  try {
+    const goal = await Goal.findOne({ user: req.user.id });
+    if (!goal) {
+      return res.status(200).json({
+        message: 'No goals saved yet.',
+      });
+    }
+
+    res.status(200).json(goal);
+  } catch (error) {
+    res.status(500).json({
+      message: 'Server error while fetching goals',
+    });
+  }
+};
+
+module.exports = { setGoal, getGoal };
+
